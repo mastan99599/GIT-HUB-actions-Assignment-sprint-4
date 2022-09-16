@@ -28,12 +28,28 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
+    
       - name: Run on secrets
         run: echo ${{ secrets.shaik }}
+  
+  terraform:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.1.7
+
+      - name: Terraform Init
+        id: init
+        run: terraform init
+
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color
+        # continue-on-error: true
+      - run: echo ${{ steps.plan.outputs.stdout }}
+        # run: |
+        #     cd example
+        #     python test.py
+    
