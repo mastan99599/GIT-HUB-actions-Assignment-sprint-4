@@ -47,7 +47,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color
-        # continue-on-error: true
+        continue-on-error: true
       - run: echo hello shaik
         # run: |
         #     cd example
