@@ -34,8 +34,8 @@ jobs:
         id: init
         run: terraform init
 
-      # - name: Run on secrets
-      #   run: echo ${{ secrets.shaik }}
+      - name: Run on secrets
+        run: echo ${{ secrets.shaik }}
 
       - name: Terraform Plan
         id: plan
