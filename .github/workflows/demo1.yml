@@ -48,7 +48,7 @@ jobs:
         id: plan
         run: terraform plan 
         continue-on-error: true
-      - name: Terraform Plan
+      - name: Terraform Apply
         run:terraform apply -auto-approve
 
         # run: |
