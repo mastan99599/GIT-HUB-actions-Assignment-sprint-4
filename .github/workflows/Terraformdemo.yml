@@ -21,7 +21,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        
+
       # - name: Run on secrets
       #   run: echo ${{ secrets.shaik }}
   
@@ -42,7 +42,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} 
         # if you have/need it
-          aws-region: ap-sout-1
+          aws-region: ap-south-1
 
       
       - name: Terraform Init
