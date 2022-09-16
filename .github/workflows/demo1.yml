@@ -46,9 +46,11 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan 
         continue-on-error: true
-      - run: echo hello shaik
+      - name: Terraform Plan
+        run:terraform apply -auto-approve
+
         # run: |
         #     cd example
         #     python test.py
