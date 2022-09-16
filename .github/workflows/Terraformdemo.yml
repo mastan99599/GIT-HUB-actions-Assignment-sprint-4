@@ -17,8 +17,8 @@ on:
 jobs: 
   terraform:
     runs-on: ubuntu-latest
-      # - name: Run on secrets
-      #   run: echo ${{ secrets.shaik }}
+      - name: Run on secrets
+        run: echo ${{ secrets.shaik }}
   
    
     steps:
@@ -31,6 +31,9 @@ jobs:
         id: init
         run: terraform init
 
+      - name: Run on secrets
+        run: echo ${{ secrets.shaik }}
+
       - name: Terraform Plan
         id: plan
         run: terraform plan 
@@ -39,7 +42,7 @@ jobs:
         run: terraform apply -auto-approve
       
 
-        # run: |
+        # run: |echo ${{ secrets.shaik }}
         #     cd example
         #     python test.py
 
