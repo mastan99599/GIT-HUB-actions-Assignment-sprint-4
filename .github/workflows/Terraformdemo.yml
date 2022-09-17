@@ -9,8 +9,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    paths:
-      - 'example/**'
+    # paths:
+    #   - 'example/**'
 
 
   # Allows you to run this workflow manually from the Actions tab
@@ -55,8 +55,5 @@ jobs:
         run: terraform apply -auto-approve
       
 
-        # run: |
-        #     cd example
-        #     python test.py
 
     
