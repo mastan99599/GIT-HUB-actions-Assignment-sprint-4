@@ -18,6 +18,8 @@ jobs:
   terraform:
     name: 'TF GitHub Actions Demo'
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./example
     defaults:
       run:
         shell: bash
