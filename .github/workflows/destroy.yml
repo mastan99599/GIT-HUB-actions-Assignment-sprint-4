@@ -1,11 +1,19 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Second work flow Terraform Destroy
+<<<<<<< HEAD
 on:
   # workflow_run:
   #   workflows: [TF GitHub Actions Demo]
   #   types:
   #     - completed
+=======
+# on:
+#   workflow_run:
+#     workflows: [TF GitHub Actions Demo]
+#     types:
+#       - completed
+>>>>>>> 85df9f0fc9107751c6ce7df146c0bf5b72f93b7d
 
 # Controls when the workflow will run
 # on:
