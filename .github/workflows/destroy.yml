@@ -2,10 +2,10 @@
 
 name: Second work flow Terraform Destroy
 on:
-  workflow_run:
-    workflows: [TF GitHub Actions Demo]
-    types:
-      - completed
+  # workflow_run:
+  #   workflows: [TF GitHub Actions Demo]
+  #   types:
+  #     - completed
 
 # Controls when the workflow will run
 # on:
@@ -22,6 +22,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs: 
+  needs: terraform
   terraform-destroy:
     name: 'Terraform Destroy'
     runs-on: ubuntu-latest
