@@ -53,9 +53,14 @@ jobs:
         run: terraform apply -auto-approve
         
 
-      - name: Terraform destroy
-        id: destroy
-        run: terraform destroy -auto-approve
+      # - name: Terraform destroy
+      #   id: destroy
+      #   run: terraform destroy -auto-approve
+        name: Second workflow Terraform Destroy
+
+        on:
+          repository_dispatch:
+            types: [trigger-Second workflow Terraform Destroy]
 
 
     
