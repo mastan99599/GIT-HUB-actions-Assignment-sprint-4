@@ -1,36 +1,18 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Second work flow Terraform Destroy
-<<<<<<< HEAD
+name: Second workflow Terraform Destroy
 on:
-  # workflow_run:
-  #   workflows: [TF GitHub Actions Demo]
-  #   types:
-  #     - completed
-=======
-# on:
-#   workflow_run:
-#     workflows: [TF GitHub Actions Demo]
-#     types:
-#       - completed
->>>>>>> 85df9f0fc9107751c6ce7df146c0bf5b72f93b7d
-
-# Controls when the workflow will run
-# on:
   # # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
    
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs: 
-  needs: terraform
   terraform-destroy:
     name: 'Terraform Destroy'
     runs-on: ubuntu-latest
