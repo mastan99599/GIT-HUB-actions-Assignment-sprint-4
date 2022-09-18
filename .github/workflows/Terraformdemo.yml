@@ -58,9 +58,9 @@ jobs:
       #   run: terraform destroy -auto-approve
        
 
-        on:
-          repository_dispatch:
-            types: [trigger-Second workflow Terraform Destroy]
+        # on:
+        #   repository_dispatch:
+        #     types: [trigger-Second workflow Terraform Destroy]
 
 
     
